@@ -1,7 +1,7 @@
 # weather-data
 From 2014 to 2025 I've run a hobby weather station at my home in Loughrea, Ireland.  This is its data.
 
-Sadly, in November 2025, the receiving console has reached the end of its memory.  Although it is still receiving data from external sensors, it has lost the capacity to save them to memory, or make them available for live processing. I've decided to make the historical logs available to all, in the hope they provide some utility.
+Sadly, in November 2025, the receiving console has reached the end of its memory.  Although it is still receiving data from external sensors, it has lost the capacity to save them to memory, or make them available for live processing. I've decided to make the historical logs available to all, in the hope they provide some utility under a CC-BY 4.0 License.
 
 If you do make use of this data, I'd be delighted to hear of your use case.
 
