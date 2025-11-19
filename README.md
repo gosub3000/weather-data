@@ -1,7 +1,7 @@
 # weather-data
 From 2014 to 2025 I've run a hobby weather station at my home in Loughrea, Ireland.  This is its data.
 
-Sadly, in November 2025, the receiving console has reached the end of it's memory.  Although it is still receiving data from external sensors, it has lost the capacity to save them to memory, or make them available for live processing. I've decided to make the historical logs available to all, in the hope they provide some utility.
+Sadly, in November 2025, the receiving console has reached the end of its memory.  Although it is still receiving data from external sensors, it has lost the capacity to save them to memory, or make them available for live processing. I've decided to make the historical logs available to all, in the hope they provide some utility.
 
 If you do make use of this data, I'd be delighted to hear of your use case.
 
@@ -30,5 +30,8 @@ All times are recorded in **UTC** (Coordinated Universal Time). The typical unit
 | **11** | `2` | **Rainfall** | 0.3mm units | Accumulated rainfall **since the last log record**. This value is often stored in units of 0.3 mm on the console. |
 | **12** | `280.2` | **Wind Direction** | Degrees | Wind direction in degrees (0 = North, 90 = East, 180 = South, 270 = West). |
 | **13** | `0` | **Status** | Integer | Status code (e.g., used to indicate a sensor error, battery low, or rain counter overflow). `0` means no error. |
+
+## Notes
+**Rainfall Units**: The rainfall field (Field 11) is typically recorded as the count of tipping bucket events. For many weather stations, each "tip" represents ~0.3 mm of rain. To get the actual rainfall in millimeters for the period, you would multiply this count by 0.3. The values can jump, for example 2 to 0 to 14 to 10, indicating sporadic rain showers occurred during the period.
 
 Further information on file format can be found in the PyWWS documentation.
